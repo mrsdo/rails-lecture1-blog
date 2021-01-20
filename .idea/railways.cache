@@ -2,6 +2,11 @@ do /Users/mj163/Development/code/mod3/rails-lecture1-blog/bin/bundle exec /Users
 Ruby enVironment Manager 1.29.11-next (master) (c) 2009-2020 Michal Papis, Piotr Kuczynski, Wayne E. Seguin
 
                                   Prefix Verb   URI Pattern                                                                                       Controller#Action
+                             hello_world GET    /hello_world(.:format)                                                                            posts#home
+                                   posts GET    /posts(.:format)                                                                                  posts#index
+                                    post GET    /posts/:id(.:format)                                                                              posts#show
+                                   about GET    /about(.:format)                                                                                  static#about
+                                    team GET    /team(.:format)                                                                                   static#team
            rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                           action_mailbox/ingresses/postmark/inbound_emails#create
               rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                              action_mailbox/ingresses/relay/inbound_emails#create
            rails_sendgrid_inbound_emails POST   /rails/action_mailbox/sendgrid/inbound_emails(.:format)                                           action_mailbox/ingresses/sendgrid/inbound_emails#create

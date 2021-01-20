@@ -5,6 +5,23 @@
 3. If I need a new table, do I have that model? No, use the model generator
 4. After I generate a new model and migrate the DB, I need to make sure it works 
 
+## TOPICS
+
+a.  Rails Application Layout
+b.  Migration Generator
+c.  Model Generator
+d.  Controller Generator
+e.  Controllers being classes and actions being methods
+f.  Routes
+g.  Mapping URL's to a Controller Action via routes
+h.  View Rendering
+i.  Implicit/Explicit Rendering
+j.  Loading instances and data in a controller action
+k.  Using instances and data in a view
+l.  Linking to helpers and generating HTML/Links in Rails (ActionView)
+* rails console > app.route_path # can help generate links
+
+
 ### ActiveRecord Conventions
 * Table name: lowercase plural name of model - posts
 * Model filename: singular lowercase (underscored) - post.rb
@@ -35,6 +52,10 @@
 * POST /post -> submit new blog post
 
 * GET /posts/:id/edit -> edit blog post
+
+* GET /about -> StatisController#about
+
+* GET /team -> StaticController#team
 
 ### MODELS
 * Model filename: singular lowercase (underscored) - i.e, post.rb
@@ -147,7 +168,7 @@ Available field types:
     For decimal, two integers separated by a comma in curly braces will be used
     for precision and scale:
 
-        `bin/rails generate model product 'price:decimal{10,2}'`
+        `bin/rails generatRe model product 'price:decimal{10,2}'`
 
     You can add a `:uniq` or `:index` suffix for unique or standard indexes
     respectively:
@@ -207,6 +228,8 @@ Examples:
 Routes must map to controller actions:
 
 * Rails route map a URL to a Controller (Class) and and Action (Methods)
+* Example: get '/agent' => 'list#portfolio'
+
 
 ***
 ### CONTROLLER ACTIONS

@@ -1,0 +1,19 @@
+<h1>My Blog Posts</h1>
+<ol>
+<% @post.each do |post| %>
+    <!--<li><a href="/posts/<%= post.id %>"><%= post.title %></a></li>-->
+    <!-- Abstract, but hard coding links -->
+    <li><%= link_to(post.title, "/posts/#{post.id}") %></li>
+    <li><%= link_to(post.title, post_path(post)) %></li>
+    <li><%= link_to(post.title, post_path(post.id)) %></li>
+    <!-- Most abstract -->
+    <li><%= link_to(post.title,post) %></li>
+  <% end %>
+</ol>
+
+
+
+
+<%= link_to("About Page", "/about") %></br>
+<%= link_to("Posts", "/posts") %></br>
+
